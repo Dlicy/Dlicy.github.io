@@ -112,7 +112,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -130,6 +130,108 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/655c6c11/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/655c6c11/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-11-21 16:36:33 / Modified: 16:37:20" itemprop="dateCreated datePublished" datetime="2023-11-21T16:36:33+08:00">2023-11-21</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><code>cpp</code></p>
+<h1 id="include"><a href="#include" class="headerlink" title="include"></a>include<bits/stdc++.h></h1><p>using namespace std;<br>long long int dp[500003];</p>
+<p>int main(){<br>    int T,N;<br>    cin&gt;&gt;T&gt;&gt;N;<br>    int weight[500003];<br>    int value[500003];<br>    memset(weight,0,sizeof(weight));<br>    memset(value,0,sizeof(value));<br>    for(int i=0;i<N;i++){
+        cin>&gt;weight[i]&gt;&gt;value[i];<br>    }<br>    for(int i=0;i<N;i++){
+            for(int j=weight[i];j<=T;j++){
+                dp[j] = max(dp[j], dp[j-weight[i]] + value[i]);
+                cout<<"dp"<<dp[j]<<"- ";
+            }
+            cout<<"---"<<endl;
+        }
+    cout<<endl<<"��������"<<endl;
+    for(int j=T;j>=weight[0];j—){<br>        cout&lt;<dp[j]<<" ";
+    }
+    long long int cnt=0;
+    cout<<endl<<"���"<<endl;
+    for(int j=T;j>=0;j—){<br>        cnt=max(dp[j],cnt);<br>    }<br>    cout&lt;&lt;cnt&lt;&lt;endl;</p>
+<pre><code>return 0;
+</code></pre><p>}</p>
+<h1 id="���Ĳ�ҩ"><a href="#���Ĳ�ҩ" class="headerlink" title="���Ĳ�ҩ"></a>���Ĳ�ҩ</h1><h2 id="��L����"><a href="#��L����" class="headerlink" title="��Ŀ����"></a>��Ŀ����</h2><p>����Ϊ���� LiYuxiang ������</p>
+<h2 id="��L����-1"><a href="#��L����-1" class="headerlink" title="��Ŀ����"></a>��Ŀ����</h2><p>LiYuxiang �Ǹ����ʴ�ӱ�ĺ��ӣ����������ǳ�Ϊ��������ΰ���ҽʦ��Ϊ�ˣ�����ݸ�������������ҽʦΪʦ��ҽʦΪ���ж��������ʣ���������һ�����⡣ҽʦ��������һ���������ǲ�ҩ��ɽ�������˵�������ӣ����ɽ������һЩ��ͬ����Ĳ�ҩ����ÿһ�ֶ���ҪһЩʱ�䣬ÿһ��Ҳ���������ļ�ֵ���һ����һ��ʱ�䣬�����ʱ�������Բɵ�һЩ��ҩ���������һ�������ĺ��ӣ���Ӧ�ÿ����òɵ��Ĳ�ҩ���ܼ�ֵ��󡣡�</p>
+<p>������� LiYuxiang������������������</p>
+<p>�����ԭ��Ĳ�ͬ�㣺</p>
+<p>$1$. ÿ�ֲ�ҩ���������Ƶط���ժ��</p>
+<p>$2$. ҩ�������ۻ����ң���ҩʱ��ó��ó�����ʦ���ȵþջ���л�ˣ�</p>
+<h2 id="�����ʽ"><a href="#�����ʽ" class="headerlink" title="�����ʽ"></a>�����ʽ</h2><p>�����һ���������������ֱ�����ܹ��ܹ�������ҩ��ʱ�� $t$ �ʹ���ɽ����Ĳ�ҩ����Ŀ $m$��</p>
+<p>�� $2$ ���� $(m + 1)$ �У�ÿ�������������� $(i + 1)$ �е����� $a_i, b_i$ �ֱ��ʾ��ժ�� $i$ �ֲ�ҩ��ʱ��͸ò�ҩ�ļ�ֵ��</p>
+<h2 id="�����ʽ-1"><a href="#�����ʽ-1" class="headerlink" title="�����ʽ"></a>�����ʽ</h2><p>���һ�У���һ��ֻ����һ����������ʾ�ڹ涨��ʱ���ڣ����Բɵ��Ĳ�ҩ������ܼ�ֵ��</p>
+<h2 id="����-1"><a href="#����-1" class="headerlink" title="���� #1"></a>���� #1</h2><h3 id="��������-1"><a href="#��������-1" class="headerlink" title="�������� #1"></a>�������� #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">70 3</span><br><span class="line">71 100</span><br><span class="line">69 1</span><br><span class="line">1 2</span><br></pre></td></tr></table></figure>
+<h3 id="�������-1"><a href="#�������-1" class="headerlink" title="������� #1"></a>������� #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">140</span><br></pre></td></tr></table></figure>
+<h2 id="��ʾ"><a href="#��ʾ" class="headerlink" title="��ʾ"></a>��ʾ</h2><h4 id="���ݹ�g��Լ��"><a href="#���ݹ�g��Լ��" class="headerlink" title="���ݹ�ģ��Լ��"></a>���ݹ�ģ��Լ��</h4><ul>
+<li>���� $30\%$ �����ݣ���֤ $m \le 10^3$ ��</li>
+<li>���� $100\%$ �����ݣ���֤ $1 \leq m \le 10^4$��$1 \leq t \leq 10^7$���� $1 \leq m \times t \leq 10^7$��$1 \leq a_i, b_i \leq 10^4$��</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
