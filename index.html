@@ -112,7 +112,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -130,6 +130,102 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/657ae1ad/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/657ae1ad/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-12-14 19:06:21 / Modified: 19:28:57" itemprop="dateCreated datePublished" datetime="2023-12-14T19:06:21+08:00">2023-12-14</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Go-learned"><a href="#Go-learned" class="headerlink" title="Go learned"></a>Go learned</h1><p><a target="_blank" rel="noopener" href="https://gopl-zh.github.io/ch1/ch1-01.html">go����ʥ��</a></p>
+<h3 id="�����u"><a href="#�����u" class="headerlink" title="�����ṹ"></a>�����ṹ</h3><p>package ��</p>
+<p>import(<br>    ��<br>)</p>
+<p>func mian(){</p>
+<p>}</p>
+<h6 id="fmt��"><a href="#fmt��" class="headerlink" title="fmt��"></a>fmt��</h6><p><code>fmt</code> �� Go ���Ա�׼���е�һ���������ڸ�ʽ���������������ṩ��һ�麯�������ͣ������ڿ���̨���ļ����������Ŀ���Ͻ��и�ʽ������������������</p>
+<p>������ <code>fmt</code> ���ṩ��һЩ���ù��ܣ�</p>
+<ol>
+<li><p>��ʽ�������<code>fmt.Print</code>��<code>fmt.Println</code>��<code>fmt.Printf</code> �Ⱥ��������ڿ���̨���׼����ϴ�ӡ��������ǿɽ��ܲ�ͬ���͵Ĳ�������������Ҫ���и�ʽ�������磬<code>fmt.Printf</code> ����ʹ�ø�ʽ�ַ�����ָ������ĸ�ʽ��ռλ����</p>
+</li>
+<li><p>��ʽ�����룺<code>fmt.Scan</code>��<code>fmt.Scanf</code>��<code>fmt.Scanln</code> �Ⱥ������ڴ�����Դ�����׼���룩��ȡ���룬���������Ϊָ�������͡���Щ�������Ը��ݸ�ʽ�ַ������������������������ͷָ</p>
+</li>
+<li><p>�ַ���ƴ�ӣ�<code>fmt.Sprintf</code> �������ڽ���ʽ��������д���ַ��������������ɵ��ַ����������Խ���ͬ���͵�ֵ��ʽ�������ӳ�һ���ַ�����</p>
+</li>
+<li><p>���������<code>fmt.Errorf</code> �������ڴ���һ���µĴ�����󣬲���������Ϣ��ʽ��Ϊ�ַ��������������ڴ�������ʱ�����Զ���Ĵ�����Ϣ��</p>
+</li>
+<li><p>�Զ��������ʽ��<code>fmt</code> �����ṩ��һЩ�ӿڣ��� <code>fmt.Stringer</code> �� <code>fmt.Formatter</code>�������Զ������͵������ʽ����</p>
+</li>
+</ol>
+<p>������������֮�⣬<code>fmt</code> �����ṩ������һЩ���������ͣ����ڴ������ָ�ʽ���ʹ�ӡ������������� Go �����г��õİ�֮һ�����ڿ��ٽ��м򵥵���������������</p>
+<p>������һ���򵥵�ʾ������ʾ�����ʹ�� <code>fmt</code> �����и�ʽ�������</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    name := <span class="string">&quot;Alice&quot;</span></span><br><span class="line">    age := <span class="number">30</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;Name: %s, Age: %d\n&quot;</span>, name, age)</span><br><span class="line"></span><br><span class="line">    pi := <span class="number">3.14159</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;Pi: %.2f\n&quot;</span>, pi)</span><br><span class="line"></span><br><span class="line">    isError := <span class="literal">true</span></span><br><span class="line">    errorMessage := <span class="string">&quot;Something went wrong&quot;</span></span><br><span class="line">    err := fmt.Errorf(<span class="string">&quot;Error: %t, Message: %s&quot;</span>, isError, errorMessage)</span><br><span class="line">    fmt.Println(err)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>������ʾ���У�����ʹ���� <code>fmt.Printf</code> ��������ʽ�����������ʹ����ռλ�� <code>%s</code> �� <code>%d</code> ����ʾ�ַ�����������ֵ����ͨ��������Ӧ�ı����������滻�����⣬���ǻ�ʹ���� <code>.2f</code> ��ʽ��ռλ����ָ���������ľ��ȣ�������λС�����������ʹ�� <code>fmt.Errorf</code> ������һ��������󣬲��������������̨��</p>
+<p>��ֻ�� <code>fmt</code> ����һС���ֹ��ܣ������ṩ�˸���Ĺ��ܺ�ѡ����Ը�����Ҫ����ʹ�ú�̽����</p>
+<h5 id="fmt�����������"><a href="#fmt�����������" class="headerlink" title="fmt�����������"></a>fmt�����������</h5><p>1.fmt.Println:<br>���ڴ�ӡһ�У���������Զ�����һ�����з� (\n)��<br>���Խ��ܶ����������������֮�����ո�<br>fmt.Println(“Hello”, “World”)</p>
+<p>2.fmt.Printf:<br>������C���Ե� printf ������ʹ�ø�ʽ���ַ��������������ʽ��<br>֧�ָ�ʽ��ռλ������ %s��%d �ȡ�<br>�����Զ����ӻ��з�������Ҫ�ֶ����� \n ����ʹ�� %v ��ʽ��ռλ�����һ�����з���<br>name := “John”<br>age := 30<br>fmt.Printf(“Name: %s, Age: %d\n”, name, age)<br>// ���: Name: John, Age: 30</p>
+<p>3.fmt.Print:<br>���ڴ�ӡһ�У��������Զ����ӻ��з���<br>���Խ��ܶ����������������֮�����ո�<br>fmt.Print(“Hello”, “World”)<br>// ���: HelloWorld<br>fmt.Println ���ڴ�ӡһ�У����Զ����ӻ��з���<br>fmt.Printf ʹ�ø�ʽ���ַ��������Զ����ӻ��з���<br>fmt.Print ���ڴ�ӡһ�У����Զ����ӻ��з���</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
