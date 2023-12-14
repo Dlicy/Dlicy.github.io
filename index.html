@@ -157,7 +157,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/657ae1ad/" class="post-title-link" itemprop="url">Untitled</a>
+          <a href="/657ae1ad/" class="post-title-link" itemprop="url">2023/11/21每日一题：疯狂采药</a>
         </h2>
 
         <div class="post-meta-container">
@@ -169,7 +169,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-12-14 19:06:21 / Modified: 19:33:43" itemprop="dateCreated datePublished" datetime="2023-12-14T19:06:21+08:00">2023-12-14</time>
+      <time title="Created: 2023-12-14 19:06:21 / Modified: 19:41:52" itemprop="dateCreated datePublished" datetime="2023-12-14T19:06:21+08:00">2023-12-14</time>
     </span>
 
   
@@ -182,34 +182,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Go-learned"><a href="#Go-learned" class="headerlink" title="Go learned"></a>Go learned</h1><p><a target="_blank" rel="noopener" href="https://gopl-zh.github.io/ch1/ch1-01.html">go语言圣经</a></p>
-<h3 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h3><p>package 包</p>
-<p>import(<br>    包<br>)</p>
-<p>func mian(){</p>
-<p>}</p>
-<h6 id="fmt包"><a href="#fmt包" class="headerlink" title="fmt包"></a>fmt包</h6><p><code>fmt</code> 是 Go 语言标准库中的一个包，用于格式化输入和输出。它提供了一组函数和类型，用于在控制台、文件和其他输出目标上进行格式化的输入和输出操作。</p>
-<p>以下是 <code>fmt</code> 包提供的一些常用功能：</p>
-<ol>
-<li><p>格式化输出：<code>fmt.Print</code>、<code>fmt.Println</code>、<code>fmt.Printf</code> 等函数用于在控制台或标准输出上打印输出。它们可接受不同类型的参数，并根据需要进行格式化。例如，<code>fmt.Printf</code> 允许使用格式字符串来指定输出的格式和占位符。</p>
-</li>
-<li><p>格式化输入：<code>fmt.Scan</code>、<code>fmt.Scanf</code>、<code>fmt.Scanln</code> 等函数用于从输入源（如标准输入）读取输入，并将其解析为指定的类型。这些函数可以根据格式字符串或其他规则进行输入解析和分割。</p>
-</li>
-<li><p>字符串拼接：<code>fmt.Sprintf</code> 函数用于将格式化的数据写入字符串，并返回生成的字符串。它可以将不同类型的值格式化并连接成一个字符串。</p>
-</li>
-<li><p>错误输出：<code>fmt.Errorf</code> 函数用于创建一个新的错误对象，并将错误消息格式化为字符串。它常用于在处理错误时生成自定义的错误消息。</p>
-</li>
-<li><p>自定义输出格式：<code>fmt</code> 包还提供了一些接口，如 <code>fmt.Stringer</code> 和 <code>fmt.Formatter</code>，用于自定义类型的输出格式化。</p>
-</li>
-</ol>
-<p>除了上述功能之外，<code>fmt</code> 包还提供了其他一些函数和类型，用于处理各种格式化和打印输出的需求。它是 Go 语言中常用的包之一，用于快速进行简单的输入和输出操作。</p>
-<p>以下是一个简单的示例，演示了如何使用 <code>fmt</code> 包进行格式化输出：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    name := <span class="string">&quot;Alice&quot;</span></span><br><span class="line">    age := <span class="number">30</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;Name: %s, Age: %d\n&quot;</span>, name, age)</span><br><span class="line"></span><br><span class="line">    pi := <span class="number">3.14159</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;Pi: %.2f\n&quot;</span>, pi)</span><br><span class="line"></span><br><span class="line">    isError := <span class="literal">true</span></span><br><span class="line">    errorMessage := <span class="string">&quot;Something went wrong&quot;</span></span><br><span class="line">    err := fmt.Errorf(<span class="string">&quot;Error: %t, Message: %s&quot;</span>, isError, errorMessage)</span><br><span class="line">    fmt.Println(err)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在上述示例中，我们使用了 <code>fmt.Printf</code> 函数来格式化输出。我们使用了占位符 <code>%s</code> 和 <code>%d</code> 来表示字符串和整数的值，并通过传递相应的变量来进行替换。此外，我们还使用了 <code>.2f</code> 格式化占位符来指定浮点数的精度，保留两位小数。最后，我们使用 <code>fmt.Errorf</code> 创建了一个错误对象，并将其输出到控制台。</p>
-<p>这只是 <code>fmt</code> 包的一小部分功能，它还提供了更多的功能和选项，可以根据需要进行使用和探索。</p>
-<h5 id="fmt输出函数分析"><a href="#fmt输出函数分析" class="headerlink" title="fmt输出函数分析"></a>fmt输出函数分析</h5><p>1.fmt.Println:<br>用于打印一行，并在最后自动添加一个换行符 (\n)。<br>可以接受多个参数，并在它们之间插入空格。<br>fmt.Println(“Hello”, “World”)</p>
-<p>2.fmt.Printf:<br>类似于C语言的 printf 函数，使用格式化字符串来控制输出格式。<br>支持格式化占位符，如 %s、%d 等。<br>不会自动添加换行符，你需要手动添加 \n 或者使用 %v 格式化占位符输出一个换行符。<br>name := “John”<br>age := 30<br>fmt.Printf(“Name: %s, Age: %d\n”, name, age)<br>// 输出: Name: John, Age: 30</p>
-<p>3.fmt.Print:<br>用于打印一行，但不会自动添加换行符。<br>可以接受多个参数，并在它们之间插入空格。<br>fmt.Print(“Hello”, “World”)<br>// 输出: HelloWorld<br>fmt.Println 用于打印一行，并自动添加换行符。<br>fmt.Printf 使用格式化字符串，不自动添加换行符。<br>fmt.Print 用于打印一行，不自动添加换行符。</p>
-
+          Here's something encrypted, password is required to continue reading.
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/657ae1ad/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
